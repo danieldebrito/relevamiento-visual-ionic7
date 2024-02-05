@@ -1,0 +1,69 @@
+<ion-content class="background-image ion-align-items-center ion-text-center" style="height: 100vh;">
+  <div style="display: flex; flex-direction: column; justify-content: center;">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <ion-grid>
+        <ion-row color="primary" class="ion-justify-content-center">
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <ion-text color="secondary">
+              <h2>Ingresá a Releva</h2>
+            </ion-text>
+            <div padding>
+              <ion-item>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="fa fa-user"></i></div>
+                  <ion-input  type="email" class="form-control" formControlName="email" (click)="errorFalse()"
+                    placeholder="email" />
+                    <small class="invalid" *ngIf="loginForm.controls.email.errors?.['email']">
+                      Debe ingresar un e-mail valido.
+                    </small>
+                </div>
+              </ion-item>
+              <ion-item>
+                <div class="input-group">
+                  <div class="input-group-text"><i class="fa fa-key"></i></div>
+                  <ion-input  type="password" class="form-control" formControlName="password" (click)="errorFalse()"
+                    placeholder="contraseña" />
+                    <small class="invalid" *ngIf="loginForm.controls.email.errors?.['email']">
+                      Debe ingresar una contraseña valida.
+                    </small>
+                </div>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button size="large" type="submit" [disabled]="loginForm.invalid" expand="block">Entrar</ion-button>
+              <!--
+                  <ion-button size="large" type="submit" [disabled]="loginForm.invalid" expand="block">Entrar</ion-button>
+              -->
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+  </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="AutoSignIn('ADM')">
+        ADM
+      </ion-fab-button>
+      <ion-fab-button (click)="AutoSignIn('INV')">
+        INV
+      </ion-fab-button>
+      <ion-fab-button (click)="AutoSignIn('USR')">
+        USR
+      </ion-fab-button>
+      <ion-fab-button (click)="AutoSignIn('ANN')">
+        ANN
+      </ion-fab-button>
+      <ion-fab-button (click)="AutoSignIn('TST')">
+        TST
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> 
+      <ion-text color="secondary">
+        <h2>Releva</h2>
+      </ion-text></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background-image">
+
+  <ion-card (click)="navegarLindas()" color="primary">
+    <img alt="Silhouette of mountains" src="../../../assets/card-linda.png" />
+    <ion-card-header>
+      <ion-card-title>Cosas Lindas</ion-card-title>
+      <ion-card-subtitle>de tu Edificio</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Mostra las cosas lindas, Tomá una foto para que tu vecinos la voten.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="navegarFeas()" color="primary">
+    <img alt="Silhouette of mountains" src="../../../assets/card-feo.png" />
+    <ion-card-header>
+      <ion-card-title>Cosas Feas</ion-card-title>
+      <ion-card-subtitle>de tu edifico</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      ¿Que cosas feas ves en tu edificio? Tomale una foto para mostrarla.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

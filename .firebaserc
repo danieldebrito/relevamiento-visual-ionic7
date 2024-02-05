@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pps-2023": {
+      "hosting": {
+        "app": [
+          "pps-2023"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pps-2023"
+  }
+}
